@@ -7,8 +7,10 @@ using namespace std;
 int main() {
 	ofstream primes;
 	primes.open ("primes.txt");
-	bool primesList[SIZE];
-	memset (primesList, true, sizeof(bool)*SIZE);
+	bool* primesList = NULL;
+	primesList = new bool[SIZE];
+	//memset (primesList, true, sizeof(bool)*SIZE); (not idiomatic)
+
 	int i, j = 2;
 	for (i = 2; i < sqrt(SIZE); ++i) 
 	{
