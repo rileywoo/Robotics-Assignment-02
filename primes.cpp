@@ -7,8 +7,8 @@ using namespace std;
 int main() {
 	ofstream primes;
 	primes.open ("primes.txt");
-	bool* primesList = NULL;
-	primesList = new bool[SIZE];
+	bool primesList[SIZE];
+	fill_n(primesList, SIZE, true);
 	//memset (primesList, true, sizeof(bool)*SIZE); (not idiomatic)
 
 	int i, j = 2;
